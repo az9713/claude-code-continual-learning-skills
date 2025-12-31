@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "Analyze the session context: $ARGUMENTS\n\nDetermine if this session contains substantive learnings worth capturing (debugging breakthroughs, solved problems, discovered patterns, or failures to avoid).\n\nIf stop_hook_active is true, allow the stop.\n\nIf substantive learnings exist AND no retrospective was already conducted, respond with:\n{\"decision\": \"block\", \"reason\": \"Before ending, consider running /retrospective to capture learnings from this session. Key topics: [brief list]. If you prefer to skip, just say 'stop' again.\"}\n\nIf the session was trivial (simple questions, no problem-solving) or retrospective was already done, respond with:\n{\"decision\": \"approve\"}",
+            "prompt": "Analyze the session context: $ARGUMENTS\n\nDetermine if this session contains substantive learnings worth capturing (debugging breakthroughs, solved problems, discovered patterns, or failures to avoid).\n\nIf stop_hook_active is true, allow the stop.\n\nIf substantive learnings exist AND no retrospective was already conducted, respond with:\n{\"ok\": false, \"reason\": \"Before ending, consider running /retrospective to capture learnings from this session. Key topics: [brief list]. If you prefer to skip, just say 'stop' again.\"}\n\nIf the session was trivial (simple questions, no problem-solving) or retrospective was already done, respond with:\n{\"ok\": true}",
             "timeout": 15
           }
         ]
